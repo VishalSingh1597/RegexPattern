@@ -10,22 +10,23 @@ namespace RegexDemo
     class Program
     {
         static void Main(string[] args)
+        //Entery ponit
         {
-            string pincode = "^[0-9]{3}[]*[0-9]{3}$";
-            string[] pinCodeArr = { "422010", "482109", "40C82K", "145c22" };
-            Program p = new Program();
+            //string pincode = "^[0-9]{6}$"; //pattern using for alphabets
+            string pincode = "^[0-9]{3}[ ]*[0-9]{3}$"; //pattern
+            string[] pinCodeArr = { "422010", "482109", "145222", "145 222", "422 010" }; //Array
 
+            Program p = new Program(); // create object
             p.ValidPincode(pinCodeArr, pincode);
             Console.WriteLine();
             Console.Read();
 
         }
-
         public void ValidPincode(string[] arr, string pincode)
         {
             Console.WriteLine("Validation Indian PIN Code");
             Regex regex = new Regex(pincode);
-            IterateLoop(arr, regex);
+            IterateLoop(arr, regex);  //calling method
         }
         public void IterateLoop(string[] arr, Regex regex)
         {

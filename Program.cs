@@ -12,7 +12,7 @@ namespace RegexDemo
         static void Main(string[] args)
         {
             string pincode = "^[0-9]{3}[]*[0-9]{3}$";
-            string[] pinCodeArr = { "422010", "A42109", "40C820", "145225" };
+            string[] pinCodeArr = { "422010", "482109", "40C82K", "145c22" };
             Program p = new Program();
 
             p.ValidPincode(pinCodeArr, pincode);
